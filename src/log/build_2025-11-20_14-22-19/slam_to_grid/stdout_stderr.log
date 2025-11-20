@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing slam_to_grid.egg-info/PKG-INFO
+writing dependency_links to slam_to_grid.egg-info/dependency_links.txt
+writing entry points to slam_to_grid.egg-info/entry_points.txt
+writing requirements to slam_to_grid.egg-info/requires.txt
+writing top-level names to slam_to_grid.egg-info/top_level.txt
+reading manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+writing manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages/slam-to-grid.egg-link (link to .)
+
+Installed /home/mohamed/ROBO201_Project/src/build/slam_to_grid
+running symlink_data

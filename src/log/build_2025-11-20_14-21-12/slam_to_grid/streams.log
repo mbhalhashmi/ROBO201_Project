@@ -1,0 +1,22 @@
+[0.921s] Invoking command in '/home/mohamed/ROBO201_Project/src/build/slam_to_grid': PYTHONPATH=/home/mohamed/ROBO201_Project/src/build/slam_to_grid/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mohamed/ROBO201_Project/src/build/slam_to_grid/build --no-deps symlink_data
+[1.228s] running develop
+[1.396s] running egg_info
+[1.396s] creating slam_to_grid.egg-info
+[1.396s] writing slam_to_grid.egg-info/PKG-INFO
+[1.397s] writing dependency_links to slam_to_grid.egg-info/dependency_links.txt
+[1.397s] writing entry points to slam_to_grid.egg-info/entry_points.txt
+[1.397s] writing requirements to slam_to_grid.egg-info/requires.txt
+[1.397s] writing top-level names to slam_to_grid.egg-info/top_level.txt
+[1.397s] writing manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+[1.398s] reading manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+[1.399s] writing manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+[1.400s] running build_ext
+[1.400s] Creating /home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages/slam-to-grid.egg-link (link to .)
+[1.401s] 
+[1.401s] Installed /home/mohamed/ROBO201_Project/src/build/slam_to_grid
+[1.401s] running symlink_data
+[1.401s] creating /home/mohamed/ROBO201_Project/src/install/slam_to_grid/share/ament_index
+[1.401s] creating /home/mohamed/ROBO201_Project/src/install/slam_to_grid/share/ament_index/resource_index
+[1.401s] creating /home/mohamed/ROBO201_Project/src/install/slam_to_grid/share/ament_index/resource_index/packages
+[1.401s] error: can't copy '/home/mohamed/ROBO201_Project/src/build/slam_to_grid/resource/slam_to_grid': doesn't exist or not a regular file
+[1.425s] Invoked command in '/home/mohamed/ROBO201_Project/src/build/slam_to_grid' returned '1': PYTHONPATH=/home/mohamed/ROBO201_Project/src/build/slam_to_grid/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mohamed/ROBO201_Project/src/build/slam_to_grid/build --no-deps symlink_data

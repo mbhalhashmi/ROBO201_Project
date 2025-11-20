@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'turtlebot3'
+package_name = 'slam_to_grid'
 
 setup(
     name=package_name,

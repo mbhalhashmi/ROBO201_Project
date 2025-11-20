@@ -1,0 +1,16 @@
+[0.786s] Invoking command in '/home/mohamed/ROBO201_Project/src/build/slam_to_grid': PYTHONPATH=/home/mohamed/ROBO201_Project/src/build/slam_to_grid/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mohamed/ROBO201_Project/src/build/slam_to_grid/build --no-deps symlink_data
+[1.046s] running develop
+[1.234s] running egg_info
+[1.234s] writing slam_to_grid.egg-info/PKG-INFO
+[1.234s] writing dependency_links to slam_to_grid.egg-info/dependency_links.txt
+[1.235s] writing entry points to slam_to_grid.egg-info/entry_points.txt
+[1.235s] writing requirements to slam_to_grid.egg-info/requires.txt
+[1.235s] writing top-level names to slam_to_grid.egg-info/top_level.txt
+[1.237s] reading manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+[1.237s] writing manifest file 'slam_to_grid.egg-info/SOURCES.txt'
+[1.239s] running build_ext
+[1.240s] Creating /home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages/slam-to-grid.egg-link (link to .)
+[1.240s] 
+[1.241s] Installed /home/mohamed/ROBO201_Project/src/build/slam_to_grid
+[1.241s] running symlink_data
+[1.275s] Invoked command in '/home/mohamed/ROBO201_Project/src/build/slam_to_grid' returned '0': PYTHONPATH=/home/mohamed/ROBO201_Project/src/build/slam_to_grid/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/ROBO201_Project/src/install/slam_to_grid/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mohamed/ROBO201_Project/src/build/slam_to_grid/build --no-deps symlink_data
