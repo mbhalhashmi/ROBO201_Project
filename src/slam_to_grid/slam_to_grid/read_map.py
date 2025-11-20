@@ -49,13 +49,14 @@ def load_grid_from_yaml(yaml_path: str):
 
 def main():
     # <pkg>/slam_to_grid/maps/my_robot_map_real.yaml
-    pkg_dir = os.path.dirname(__file__)
-    yaml_path = os.path.join(pkg_dir, "maps", "my_robot_map_real.yaml")
+    # Use the installed share directory, not the build tree
+    share_dir = get_package_share_directory('slam_to_grid')
+    yaml_path = os.path.join(share_dir, 'maps', 'my_robot_map_real.yaml')
 
     if not os.path.isfile(yaml_path):
         raise FileNotFoundError(
             f"Map YAML not found at:\n  {yaml_path}\n"
-            "Make sure the file exists or adjust the path."
+            "Did you install the maps in setup.py and rebuild?"
         )
 
     grid, res, img_path = load_grid_from_yaml(yaml_path)
