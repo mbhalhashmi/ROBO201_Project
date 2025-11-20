@@ -4,24 +4,21 @@ import matplotlib.pyplot as plt
 import os
 
 #Defining where the yaml files are
-home_dir = os.path.expanduser("~")
-yaml_path = os.path.join(home_dir, "my_robot_map_real.yaml")
+pkg_dir = os.path.expanduser(__file__)
+yaml_path = os.path.join(pkg_dir, "my_robot_map_real.yaml")
 
-def load_map(yaml_path):
-    """ Reads a .yaml and .pgm map and returns a numpy grid
-    0 = free
-    1 = occupied
-    -1 = unknown
+# Reading the YAML data
 
-    resolution: size of each grid cell in meters (gotten from YAML data)
-    """
+with open(yaml_path, "r") as f:
+    data = yaml.safe_load(f)
 
-    #
-    with open(yaml_path, 'r') as f:#read yaml file
-        pgm_path = meta['image']
-        res = meta['resolution']
-        occ_t = meta['occupied_thresh']
-        free_t = meta['free_thresh']
+# Image path
+image_path = os.path.join(os.path.dirname(yaml_path), data["image"])
 
-    # Read the 
+# Getting the yaml data
+resolution = data["resolution"]
+occ_t = data["occupied_thresh"]
+free_t = data["free_thresh"]
 
+# Load the PGM map image
+gray = plt.imread(image_path).astype(float)
