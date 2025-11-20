@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'read_map = slam_to_grid.read_map:main'
         ],
     },
 )

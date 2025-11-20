@@ -1,0 +1,36 @@
+[0.638s] Invoking command in '/home/mohamed/ROBO201_Project/src/slam_to_grid': PYTHONPATH=/home/mohamed/ROBO201_Project/build/slam_to_grid/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/slam_to_grid build --build-base /home/mohamed/ROBO201_Project/build/slam_to_grid/build install --record /home/mohamed/ROBO201_Project/build/slam_to_grid/install.log --single-version-externally-managed install_data
+[0.875s] running egg_info
+[0.876s] creating ../../build/slam_to_grid/slam_to_grid.egg-info
+[0.876s] writing ../../build/slam_to_grid/slam_to_grid.egg-info/PKG-INFO
+[0.876s] writing dependency_links to ../../build/slam_to_grid/slam_to_grid.egg-info/dependency_links.txt
+[0.876s] writing entry points to ../../build/slam_to_grid/slam_to_grid.egg-info/entry_points.txt
+[0.876s] writing requirements to ../../build/slam_to_grid/slam_to_grid.egg-info/requires.txt
+[0.877s] writing top-level names to ../../build/slam_to_grid/slam_to_grid.egg-info/top_level.txt
+[0.877s] writing manifest file '../../build/slam_to_grid/slam_to_grid.egg-info/SOURCES.txt'
+[0.879s] reading manifest file '../../build/slam_to_grid/slam_to_grid.egg-info/SOURCES.txt'
+[0.880s] writing manifest file '../../build/slam_to_grid/slam_to_grid.egg-info/SOURCES.txt'
+[0.880s] running build
+[0.880s] running build_py
+[0.880s] creating /home/mohamed/ROBO201_Project/build/slam_to_grid/build
+[0.881s] creating /home/mohamed/ROBO201_Project/build/slam_to_grid/build/lib
+[0.881s] creating /home/mohamed/ROBO201_Project/build/slam_to_grid/build/lib/slam_to_grid
+[0.881s] copying slam_to_grid/__init__.py -> /home/mohamed/ROBO201_Project/build/slam_to_grid/build/lib/slam_to_grid
+[0.881s] copying slam_to_grid/read_map.py -> /home/mohamed/ROBO201_Project/build/slam_to_grid/build/lib/slam_to_grid
+[0.881s] running install
+[0.881s] running install_lib
+[0.882s] creating /home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages/slam_to_grid
+[0.882s] copying /home/mohamed/ROBO201_Project/build/slam_to_grid/build/lib/slam_to_grid/__init__.py -> /home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages/slam_to_grid
+[0.882s] copying /home/mohamed/ROBO201_Project/build/slam_to_grid/build/lib/slam_to_grid/read_map.py -> /home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages/slam_to_grid
+[0.882s] byte-compiling /home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages/slam_to_grid/__init__.py to __init__.cpython-310.pyc
+[0.882s] byte-compiling /home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages/slam_to_grid/read_map.py to read_map.cpython-310.pyc
+[0.883s] running install_data
+[0.883s] creating /home/mohamed/ROBO201_Project/install/slam_to_grid/share/ament_index
+[0.883s] creating /home/mohamed/ROBO201_Project/install/slam_to_grid/share/ament_index/resource_index
+[0.883s] creating /home/mohamed/ROBO201_Project/install/slam_to_grid/share/ament_index/resource_index/packages
+[0.883s] copying resource/slam_to_grid -> /home/mohamed/ROBO201_Project/install/slam_to_grid/share/ament_index/resource_index/packages
+[0.883s] copying package.xml -> /home/mohamed/ROBO201_Project/install/slam_to_grid/share/slam_to_grid
+[0.883s] running install_egg_info
+[0.885s] Copying ../../build/slam_to_grid/slam_to_grid.egg-info to /home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages/slam_to_grid-0.0.0-py3.10.egg-info
+[0.885s] running install_scripts
+[0.909s] writing list of installed files to '/home/mohamed/ROBO201_Project/build/slam_to_grid/install.log'
+[0.933s] Invoked command in '/home/mohamed/ROBO201_Project/src/slam_to_grid' returned '0': PYTHONPATH=/home/mohamed/ROBO201_Project/build/slam_to_grid/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed/ROBO201_Project/install/slam_to_grid/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/slam_to_grid build --build-base /home/mohamed/ROBO201_Project/build/slam_to_grid/build install --record /home/mohamed/ROBO201_Project/build/slam_to_grid/install.log --single-version-externally-managed install_data
