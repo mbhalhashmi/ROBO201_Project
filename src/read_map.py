@@ -45,6 +45,27 @@ def load_grid_from_yaml(yaml_path: str):
     # 4) Flip vertically to match typical RViz / map orientation
     grid = np.flipud(grid)
 
+    def inflate_obstacles(grid, radius_m, resolution):
+        import math, numpy as np
+        r_cells = int(math.ceil(radius_m / resolution))
+        if r_cells <= 0:
+            return grid
+        h, w = grid.shape
+        occ_mask = (grid == 1) | (grid == -1)  # treat unknown as obstacle
+        inflated = occ_mask.copy()
+        occ_coords = np.argwhere(occ_mask)
+        for r, c in occ_coords:
+            r0, r1 = max(0, r - r_cells), min(h, r + r_cells + 1)
+            c0, c1 = max(0, c - r_cells), min(w, c + r_cells + 1)
+            inflated[r0:r1, c0:c1] = True
+        grid[inflated] = 1
+        return grid
+
+    # ---- inside load_grid_from_yaml ----
+    robot_radius = 0.10  # meters
+    grid = inflate_obstacles(grid, robot_radius, resolution)
+
+
     return grid, resolution, image_path
 
 def main():
