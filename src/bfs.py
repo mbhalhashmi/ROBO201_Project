@@ -1,45 +1,37 @@
 from collections import deque
 
-def is_valid(node, grid):
-    r, c = node
-    rows, cols = grid.shape
-    return 0 <= r < rows and 0 <= c < cols and grid[r][c] == 0
-
 def neighbours(node):
     r, c = node
-    return [
-        (r-1, c),
-        (r+1, c),
-        (r, c-1),
-        (r, c+1)
-    ]
+    return [(r-1,c), (r+1,c), (r,c-1), (r,c+1)]
+
+def is_free(grid, r, c):
+    return 0 <= r < grid.shape[0] and 0 <= c < grid.shape[1] and grid[r, c] == 0
 
 def bfs(start, goal, grid):
-    queue = deque([start])
+    q = deque([start])
+    parents = {start: None}
     visited = set([start])
-    parent = {start: None}
+    expanded = 0
 
-    while queue:
-        current = queue.popleft()
+    while q:
+        cur = q.popleft()
+        expanded += 1  # count expansion when you pop/process a node
 
-        if current == goal:
-            break
+        if cur == goal:
+            # reconstruct path
+            path = []
+            while cur is not None:
+                path.append(cur)
+                cur = parents[cur]
+            path.reverse()
+            cost = len(path) - 1
+            return path, expanded, cost
 
-        for nxt in neighbours(current):
-            if is_valid(nxt, grid) and nxt not in visited:
-                visited.add(nxt)
-                parent[nxt] = current
-                queue.append(nxt)
+        r, c = cur
+        for nr, nc in neighbours(cur):
+            if is_free(grid, nr, nc) and (nr, nc) not in visited:
+                visited.add((nr, nc))
+                parents[(nr, nc)] = cur
+                q.append((nr, nc))
 
-    # reconstruct path
-    if goal not in parent:
-        print("No path found")
-        return []
-
-    path = []
-    node = goal
-    while node is not None:
-        path.append(node)
-        node = parent[node]
-
-    return path[::-1]
+    return [], expanded, None

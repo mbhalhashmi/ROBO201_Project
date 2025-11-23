@@ -1,58 +1,44 @@
 from queue import PriorityQueue
 
-def is_valid(node, grid):
-    r, c = node
-    rows, cols = grid.shape
-    return (
-        0 <= r < rows and
-        0 <= c < cols and
-        grid[r][c] == 0  # free cell
-    )
-
 def neighbours(node):
     r, c = node
-    return [
-        (r-1, c),
-        (r+1, c),
-        (r, c-1),
-        (r, c+1)
-    ]
+    return [(r-1,c), (r+1,c), (r,c-1), (r,c+1)]
+
+def is_free(grid, r, c):
+    return 0 <= r < grid.shape[0] and 0 <= c < grid.shape[1] and grid[r, c] == 0
 
 def dijkstra(start, goal, grid):
     open_list = PriorityQueue()
     open_list.put((0, start))
-
     visited = set()
-    parent = {start: None}
-    cost = {start: 0}
+    parents = {start: None}
+    g = {start: 0}
+    expanded = 0
 
     while not open_list.empty():
-        curr_cost, curr = open_list.get()
-
-        if curr == goal:
-            break
-
-        if curr in visited:
+        cost, cur = open_list.get()
+        if cur in visited:
             continue
-        visited.add(curr)
+        visited.add(cur)
+        expanded += 1  # expansion when we settle a node
 
-        for nxt in neighbours(curr):
-            if is_valid(nxt, grid) and nxt not in visited:
-                new_cost = curr_cost + 1
-                if nxt not in cost or new_cost < cost[nxt]:
-                    cost[nxt] = new_cost
-                    parent[nxt] = curr
+        if cur == goal:
+            # reconstruct
+            path = []
+            while cur is not None:
+                path.append(cur)
+                cur = parents[cur]
+            path.reverse()
+            return path, expanded, cost
+
+        r, c = cur
+        for nr, nc in neighbours(cur):
+            if is_free(grid, nr, nc):
+                nxt = (nr, nc)
+                new_cost = cost + 1
+                if new_cost < g.get(nxt, float('inf')):
+                    g[nxt] = new_cost
+                    parents[nxt] = (r, c)
                     open_list.put((new_cost, nxt))
 
-    # reconstruct path
-    if goal not in parent:
-        print("⚠️ No path found")
-        return []
-
-    path = []
-    node = goal
-    while node is not None:
-        path.append(node)
-        node = parent[node]
-
-    return path[::-1]
+    return [], expanded, None
